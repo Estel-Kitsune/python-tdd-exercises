@@ -186,6 +186,17 @@ def base_pair(c):
     of the base pair. If the base is not recognized,
     return 'unknown'.
     """
+    new = c.lower()
+    if new == "a":
+        return "t"
+    elif new == "t":
+        return "a"
+    elif new == "c":
+        return "g"
+    elif new == "g":
+        return "c"
+    else:
+        return "unknown"
     return None
 
 
