@@ -246,7 +246,22 @@ def get_complement(s):
     Return the DNA complement in uppercase
     (A -> T, T-> A, C -> G, G-> C).
     """
-    return None
+    up = s.upper()
+    dna = list(up)
+    comp = []
+    for i in dna:
+        if i == "A":
+            comp.append("T")
+        elif i == "T":
+            comp.append("A")
+        elif i == "C":
+            comp.append("G")
+        else:
+            comp.append("C")
+    st = ""
+    scomp = st.join(comp)
+    
+    return scomp
 
 
 def test_get_complement():
