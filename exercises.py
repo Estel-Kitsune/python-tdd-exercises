@@ -220,7 +220,18 @@ def transcribe_dna_to_rna(s):
     Return string s with each letter T replaced by U.
     Result is always uppercase.
     """
-    return None
+    new = s.upper()
+    tab = list(new)
+    rna = []
+    for i in tab:
+        if i == "T":
+            rna.append("U")
+        else:
+            rna.append(i)
+    st = ""
+    srna = st.join(rna)
+
+    return srna
 
 
 def test_transcribe_dna_to_rna():
