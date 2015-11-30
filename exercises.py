@@ -98,7 +98,13 @@ def histogram(l):
     """
     Converts a list of integers into a simple string histogram.
     """
-    return None
+    sign = "#"
+    tab = []
+    for i in l:
+        m = i * sign
+        tab.append(m)
+    
+    return '\n'.join(tab)
 
 
 def test_histogram():
