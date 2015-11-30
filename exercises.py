@@ -118,7 +118,11 @@ def get_word_lengths(s):
     Returns a list of integers representing
     the word lengths in string s.
     """
-    return None
+    leng = []
+    tab = s.split()
+    for i in tab:
+        leng.append(len(i))
+    return leng
 
 
 def test_get_word_lengths():
