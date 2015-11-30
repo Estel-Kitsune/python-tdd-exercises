@@ -3,7 +3,10 @@ def reverse_list(l):
     """
     Reverses order of elements in list l.
     """
-    return None
+    #return None
+    new = l
+    new.reverse()
+    return new
 
 
 def test_reverse_list():
@@ -16,8 +19,8 @@ def reverse_string(s):
     """
     Reverses order of characters in string s.
     """
-    return None
-
+    return s[::-1]
+    
 
 def test_reverse_string():
     assert reverse_string("foobar") == "raboof"
@@ -30,7 +33,16 @@ def is_english_vowel(c):
     Returns True if c is an english vowel
     and False otherwise.
     """
-    return None
+    a = 0
+    l = ["a","A","e","E","i","I","o","O","u","U","y","Y"]
+    for i in l:
+        if c == i:
+            a = 1
+    if a == 1:
+        return True
+    else:
+        return False
+
 
 
 def test_is_english_vowel():
@@ -57,7 +69,14 @@ def count_num_vowels(s):
     """
     Returns the number of vowels in a string s.
     """
-    return None
+    total = 0
+    voy = ["a","A","e","E","i","I","o","O","u","U","y","Y"]
+    sp = list(s)
+    for letter in sp:
+        for v in voy:
+            if letter == v:
+                total = total + 1
+    return total
 
 
 def test_count_num_vowels():
