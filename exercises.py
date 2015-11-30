@@ -276,7 +276,8 @@ def get_reverse_complement(s):
     Return the reverse complement of string s
     (complement reversed in order).
     """
-    return None
+    l = get_complement(s)
+    return l[::-1]
 
 
 def test_get_reverse_complement():
