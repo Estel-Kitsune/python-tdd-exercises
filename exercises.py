@@ -137,7 +137,14 @@ def find_longest_word(s):
     Returns the longest word in string s.
     In case there are several, return the first.
     """
-    return None
+    tab = s.split()
+    maxi = 0
+    word = ""
+    for i in tab:
+        if len(i) > maxi:
+            maxi = len(i)
+            word = i
+    return word
 
 
 def test_find_longest_word():
