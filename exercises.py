@@ -335,7 +335,15 @@ def get_3mer_usage_chart(s):
     The list is alphabetically sorted by the name
     of the 3-mer.
     """
-    return None
+    tab = list(s)
+    dic = {}
+    for i in range (0, len(tab)-2, 1):
+        l = tab[i]+tab[i+1]+tab[i+2]
+        dic[l] = dic.get(l,0) + 1
+    result = []
+    for k in sorted(dic):
+        result.append((k, dic[k]))
+    return result
 
 
 def test_get_3mer_usage_chart():
@@ -366,7 +374,12 @@ def read_column(file_name, column_number):
     Reads column column_number from file file_name
     and returns the values as floats in a list.
     """
-    return None
+    listcol = []
+    fo = open(file_name, 'r')
+    for line in fo:
+        col = line.split()
+        listcol.append(col[column_number-1])
+    return listcol
 
 
 def test_read_column():
